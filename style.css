@@ -37,6 +37,8 @@
     display: flex;
     flex-direction: row;
     margin-right: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .header_text {
@@ -74,12 +76,54 @@ button {
     flex-basis: 50%;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: auto;
     display: flex;
 }
 
+.info {
+    background-color: #F9FAF8;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.info_title {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.info_images {
+    display: flex;
+
+} 
+
+.image1 .image2 .image3 .image4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.image {
+    border: 4px solid #3882F6;
+    border-radius: 16px;
+    height: 200px;
+    width: 200px;
+    flex: 1;
+}
+
+.text {
+    text-align: center;
+    flex: 1;
+}
+
 .footer {
-    color: white;
+    color: #F9FAF8;
     background-color: #1F2937;
     padding: 20px;
     text-align: center;
