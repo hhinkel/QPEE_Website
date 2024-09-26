@@ -3,7 +3,7 @@
 }
 
 .header {
-    background-color: #1F2937;
+    background-color: #1f372b;
     padding-left: 160px;
     padding-right: 160px;
 }
@@ -80,7 +80,7 @@ button {
     flex-basis: 50%;
     justify-content: center;
     align-items: center;
-    display: flex;
+    flex: 1 0 50%
 }
 
 .info {
@@ -92,7 +92,7 @@ button {
 }
 
 .info_title {
-    color: #1F2937;
+    color: #1f372b;
     font-size: 36px;
     font-weight: 900;
     text-align: center;
@@ -135,14 +135,14 @@ button {
 }
 
 .quote p {
-    color: #1F2937;
+    color: #1f372b;
     font-size: 36px;
     font-style: italic;
     font-weight: lighter;
 }
 
 .author {
-    color: #1F2937;
+    color: #1f372b;
     text-align: right;
 }
 
@@ -192,7 +192,7 @@ button {
 
 .footer {
     color: #F9FAF8;
-    background-color: #1F2937;
+    background-color: #1f372b;
     padding: 20px;
     text-align: center;
 }
