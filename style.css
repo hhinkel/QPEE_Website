@@ -3,7 +3,7 @@
 }
 
 .header {
-    background-color: #1F2937;
+    background-color: #1f372b;
     padding-left: 160px;
     padding-right: 160px;
 }
@@ -63,7 +63,7 @@
 }
 
 button {
-    background-color: #3882F6;
+    background-color: #0b8f12;
     color: #F9FAF8;
     font-size: 18px;
     text-align: center;
@@ -80,7 +80,7 @@ button {
     flex-basis: 50%;
     justify-content: center;
     align-items: center;
-    display: flex;
+    flex: 1 0 50%
 }
 
 .info {
@@ -92,7 +92,7 @@ button {
 }
 
 .info_title {
-    color: #1F2937;
+    color: #1f372b;
     font-size: 36px;
     font-weight: 900;
     text-align: center;
@@ -115,7 +115,7 @@ button {
 }
 
 .image {
-    border: 4px solid #3882F6;
+    border: 4px solid #0b8f12;
     border-radius: 16px;
     height: 200px;
     flex: 1 1 auto;
@@ -135,14 +135,14 @@ button {
 }
 
 .quote p {
-    color: #1F2937;
+    color: #1f372b;
     font-size: 36px;
     font-style: italic;
     font-weight: lighter;
 }
 
 .author {
-    color: #1F2937;
+    color: #1f372b;
     text-align: right;
 }
 
@@ -155,7 +155,7 @@ button {
 }
 
 .box {
-    background-color: #3882F6;
+    background-color: #0b8f12;
     border-radius: 16px;
     padding: 20px;
     padding-left: 100px;
@@ -192,7 +192,7 @@ button {
 
 .footer {
     color: #F9FAF8;
-    background-color: #1F2937;
+    background-color: #1f372b;
     padding: 20px;
     text-align: center;
 }
