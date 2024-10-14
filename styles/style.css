@@ -21,11 +21,6 @@
 }
 
 .links {
-    display: flex;
-    flex-direction: row;
-}
-
-.links div {
     color: #E5E7EB;
     font-size: 18px;
     margin: 20px;
@@ -50,14 +45,14 @@
 }
 
 .header_title {
-    color: #F9FAF8;
+    color: #1f372b;
     font-size: 48px;
     font-weight: 900;
     flex: 1 1 auto;
 }
 
 .header_content {
-    color: #E5E7EB;
+    color: #315329;
     font-size: 18px;
     flex: 1 1 auto;
 }
