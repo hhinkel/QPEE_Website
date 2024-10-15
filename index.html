@@ -14,18 +14,16 @@
 <body>
     <div class="header">
         <div class="header_bar">
-            <tr>
-                <th class="logo"><img src="images/QP_logo.gif" alt="QPEE logo"></th>
-                <div class="links">
-                    <th>Events <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                    <th>Volunteers <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                    <th>Cross-country course info <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                    <th>About Queeny Park <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                    <th>Directions <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                    <th>Helpful Links <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                    <th>Contact Us <i class="fa-solid fa-grip-lines-vertical"></i></th>
-                </div>
-            </tr>
+            <div class="logo"><img src="images/QP_logo.gif" alt="QPEE logo"></div>
+            <div class="links">
+                <div class="menu_item">Events</div>
+                <div class="menu_item">Volunteers</div>
+                <div class="menu_item">Cross-country course info</div>
+                <div class="menu_item">About Queeny Park</div>
+                <div class="menu_item">Directions</div>
+                <div class="menu_item">Helpful Links</div>
+                <div class="menu_item">Contact Us</div>
+            </div>
         </div>
     </div>
         <div class="header_content">
@@ -33,7 +31,7 @@
                 <div class="header_title">Queeny Park Equestrian Events</div>
                 <div class="header_content">
                     Queeny Park Equestrian Events (QPEE) is a 501c3 not-for profit with a purpose of promoting and 
-                    fostering the advancement of and interest in equestrian events, sports, training, teaching and competition of 
+                    fostering the advancement of and interest in equestrian events, sports, training, teaching, competition of 
                     horses and riders, in the St. Louis area.
                     <br>
                     It started in 1978 when Wayne C. Kennedy, a former Director of St. Louis County Parks and Recteation, built a cross-country 
@@ -45,8 +43,8 @@
                     formerly of Queeny Park. In 1980-1981 Mr. Fitzgerald and Mr. Wessel became co-organizers of the Queeny Park Horse Trials, 
                     QPEE's signature event. 
                 </div>
-                <div class="header_button">
-                    <button type="button">Sign up</button>
+                <div class="header_button" id="join">
+                    <button type="button">Join</button>
                 </div>
             </div>
             <div class="header_image">
@@ -57,21 +55,19 @@
     <div class="calendar">
         <div class="upcoming_events">Up Coming Events
         <!-- Eventually read this from a google calendar API if there is one for now do tris by hand.-->
-            <div class="event1">Event 1 title
-                <div class="date1">Date 1</div>
-                <div class="link1">Link to event page or anchor</div>
-            </div>
-            <div class="event2">Event 2 title
-                <div class="date2">Date 2</div>
-                <div class="link2">Link to event page or anchor</div>
-            </div>
-            <div class="event3">Event 3 title
-                <div class="date3">Date 3</div>
-                <div class="link3">Link to event page or anchor</div>
-            </div>
-            <div class="event4">Event 4 title
-                <div class="date4">Date 4</div>
-                <div class="link4">Link to event page or anchor</div>
+            <div class="info_events">
+                <div class="event">10/16/2024
+                    <div class="link"><a  href="#join">QPEE Meeting</a></div>
+                </div>
+                <div class="event">11/16/2024
+                    <div class="link"><a  href="#volunteer">Workday at Queeny Park</a></div>
+                </div>
+                <div class="event">11/20/2024
+                    <div class="link"><a  href="#join">QPEE Meeting</a></div>
+                </div>
+                <div class="event">12/18/2024
+                    <div class="link"><a  href="#join">QPEE Meeting</a></div>
+                </div>
             </div>
         </div>
     </div>
@@ -104,7 +100,7 @@
     </div>
     <div class="action">
         <div class="box">
-            <div class="container1">
+            <div class="container1" id="volunteer">
                 <div class="call"><strong>Call to action! It's time!</strong></div>
                 <div class="sign_up">Volunteer at a QPEE event! Just click the button</div>
             </div>
