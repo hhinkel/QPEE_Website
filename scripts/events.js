@@ -14,5 +14,15 @@ let eventItems = [{date: "04/05/2024", text: "Work Day", link: "None"},
     {date: "08/09/2025", text: "Work Day", link: "None"},
     {date: "08/10/2025", text: "Schooling Day", link: "None"},
     {date: "11/15/2025", text: "Fun Show or Hunter Pace", link: "None"},
-    {date: "11/16/2025", text: "Work Day", link: "None"},
-]
+    {date: "11/16/2025", text: "Work Day", link: "None"}];
+const events = document.getElementById("events");
+
+function createEventItems(list) {
+    for (const tableItem of eventItems) {
+        //create each row of the table 
+    }
+}
+
+function createEventList() {
+// Create table
+}
