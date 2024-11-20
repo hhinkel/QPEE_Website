@@ -17,12 +17,14 @@ let eventItems = [{date: "04/05/2024", text: "Work Day", link: "None"},
     {date: "11/16/2025", text: "Work Day", link: "None"}];
 const events = document.getElementById("events");
 
-function createEventItems(list) {
-    for (const tableItem of eventItems) {
-        //create each row of the table 
+function createEventList() {
+    const ul = document.createElement("ul");
+    for (const eventItem of eventItems) {
+        const li = document.createElement("li");
+        li.textContent = eventItem.date + ": " + eventItem.text;
+        ul.appendChild(li).className = "event_list_items";
     }
+    events.appendChild(ul).className = "eventList";
 }
 
-function createEventList() {
-// Create table
-}
+createEventList();

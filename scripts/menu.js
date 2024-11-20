@@ -1,4 +1,4 @@
-let menuItems = [{text: "Events", link: "index.html"},
+let menuItems = [{text: "Events", link: "events.html"},
         {text: "Volunteers", link: "volunteers.html"},
         {text: "Cross-country Course Info", link: "index.html"},
         {text: "About Queeny Park", link: "about_queeny.html"},
