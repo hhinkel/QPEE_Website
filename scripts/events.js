@@ -16,8 +16,12 @@ function fetchEventData() {
 function createEventList(eventItems) {
     const ul = document.createElement("ul");
     for (const eventItem of eventItems) {
+        const date = new Date(eventItem.date);
+        const now = new Date();
+        if (date < now)
+            continue;
         const li = document.createElement("li");
-        li.textContent = eventItem.date + ": " + eventItem.text;
+        li.textContent = date.toDateString() + ": " + eventItem.text;
         ul.appendChild(li).className = "event_list_items";
     }
     events.appendChild(ul).className = "eventList";
