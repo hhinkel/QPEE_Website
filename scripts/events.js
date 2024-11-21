@@ -1,24 +1,19 @@
-import eventJSON from "./events.json" assert { type: 'json' };
-console.log(eventJSON);
-let eventItems = [{date: "2025-04-12", text: "Work Day", link: "None"},
-    {date: "2025-04-13", text: "Schooling Day and Ride a Test", link: "None"},
-    {date: "2025-05-03", text: "Work Day", link: "None"},
-    {date: "2025-05-04", text: "Work Day", link: "None"},
-    {date: "2025-05-07", text: "Work Day", link: "None"},
-    {date: "2025-05-08", text: "Work Day", link: "None"},
-    {date: "2025-05-09", text: "Work Day", link: "None"},
-    {date: "2025-05-10", text: "Queeny Park Horse Trials: Dressage and Stadium", link: "None"},
-    {date: "2025-05-11", text: "Queeny Part Horse Trials: Cross Country", link: "None"},
-    {date: "2025-06-01", text: "Work Day", link: "None"},
-    {date: "2025-06-07", text: "Schooling Day", link: "None"},
-    {date: "2025-06-08", text: "Fun Ride", link: "None"},
-    {date: "2025-08-09", text: "Work Day", link: "None"},
-    {date: "2025-08-10", text: "Schooling Day", link: "None"},
-    {date: "2025-11-15", text: "Fun Show or Hunter Pace", link: "None"},
-    {date: "2025-11-16", text: "Work Day", link: "None"}];
 const events = document.getElementById("events");
 
-function createEventList() {
+function fetchEventData() {
+    fetch("/./events.json") 
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error (`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) =>
+            createEventList(data.events))
+        .catch((error) => console.error("Unable to fetch data:", error));
+}
+
+function createEventList(eventItems) {
     const ul = document.createElement("ul");
     for (const eventItem of eventItems) {
         const li = document.createElement("li");
@@ -28,4 +23,4 @@ function createEventList() {
     events.appendChild(ul).className = "eventList";
 }
 
-createEventList();
+fetchEventData();
