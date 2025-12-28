@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open home.html",
-            "file": "c:\\Users\\hhink\\QPEE Website2\\odin_design_1\\index.html"
+            "file": "c:\\Users\\hhink\\QPEE_Website\\QPEE_Website\\index.html"
         }
     ]
 }
