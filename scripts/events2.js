@@ -1,7 +1,8 @@
 const events = document.getElementById("events2");
+let test;
 
 function createEvents() {
-    // fetch event file
+    const test = fetchEvents();
     // parse event file
     // setup table 4 cells (date, time, description, link) x rows
     const p = document.createElement("p");
@@ -14,5 +15,19 @@ function createEvents() {
 }
 
 
+function fetchEvents() {
+    fetch('./events.json')
+        .then((res) => {
+            if(!res.ok) {
+                throw new Error ('HTTP error! Status: ${res.status}');
+            }
+        })
+        .then(events2 => {
+            test = events2;
+            console.log(test);
+        })
+        .catch((error) => {
+            console.error("Unable to fetch data:", error);
+})}
 
 createEvents();
