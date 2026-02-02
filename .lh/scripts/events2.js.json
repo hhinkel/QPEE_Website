@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1766534270443,
@@ -16,6 +16,10 @@
                 {
                     "date": 1766580396931,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n \r\n function createFooter() {\r\n     const p = document.createElement(\"p\");\r\n     p.textContent = \"2026-04-12 0800\";\r\n-    events2.appendChild(p).className = \"event\";\r\n+    events2.appendChild(p).className = \"eventList\";\r\n }\r\n \r\n createFooter();\r\n"
+                },
+                {
+                    "date": 1770033913458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,39 @@\n-const footer = document.getElementById(\"events2\");\r\n+const events = document.getElementById(\"events2\");\r\n+let eventData = [];\r\n \r\n-function createFooter() {\r\n+function createEvents() {\r\n+    const test = fetchEvents();\r\n+    // parse event file\r\n+    // setup table 4 cells (date, time, description, link) x rows\r\n+    console.log(\"B\", eventData);\r\n+    console.log(\"C\", test);\r\n     const p = document.createElement(\"p\");\r\n-    p.textContent = \"2026-04-12 0800\";\r\n+    const event = '{\"date\": \"2026-04-12 08:00\", \"text\": \"Schooling Day and Ride a Test\", \"link\": \"None\"}';\r\n+    console.log(event);\r\n+    const objEvent = JSON.parse(event);\r\n+    console.log(objEvent[\"date\"]);\r\n+    p.textContent = \"Date: \" + objEvent.date + \" Description: \" + objEvent.text;\r\n     events2.appendChild(p).className = \"eventList\";\r\n }\r\n \r\n-createFooter();\r\n+\r\n+async function fetchEvents() {\r\n+    try {\r\n+        const res = await fetch('./events.json');\r\n+        if (!res.ok) {\r\n+            throw new Error(`HTTP error! status: ${response.status}`);\r\n+        }\r\n+        eventData = await res.json();\r\n+        console.log(eventData.events);\r\n+        } catch (error) {\r\n+            console.error('Failed to load JSON data:', error);\r\n+        }\r\n+        return eventData.events;\r\n+    }\r\n+\r\n+createEvents();\r\n+\r\n+\r\n+/* .then(res => res.json())    \r\n+            .then((data) => data.events)\r\n+            .catch(error => console.error(\"Unable to fetch data:\", error)); */\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1766534270443,

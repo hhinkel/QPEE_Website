@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1766445420191,
@@ -28,6 +28,10 @@
                 {
                     "date": 1770032085663,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n         document.getElementsById(\"eventName\").innerHTML  = obj[\"date\"];\r\n     </script>\r\n     <br>\r\n     Fix-a-test\r\n-    <script type=\"module\" src=\"scripts/events.js\"></script>\r\n+    <script type=\"module\" src=\"scripts/events2.js\"></script>\r\n     <script src=\"scripts/footer.js\"></script>\r\n </body>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1770034074017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,17 +10,11 @@\n     <title>Queeny Park Equestrian Events</title>\r\n </head>\r\n <body>\r\n     <div id=\"header\" class=\"header\"></div>\r\n-    <div id=\"events\" class=\"events\"></div>\r\n+    <div id=\"events2\" class=\"events\"></div>\r\n+    <script src=\"scripts/menu.js\"></script>   \r\n+    <!-- <script type=\"module\" src=\"scripts/events.js\"></script> -->\r\n+    <script src=\"scripts/events2.js\"></script>\r\n     <div id=\"footer\" class=\"footer\"></div>\r\n-    <script src=\"scripts/menu.js\"></script>   \r\n-    <script>\r\n-        const event = {\"date\": \"2026-04-12 08:00\", \"text\": \"Schooling Day and Ride a Test\", \"link\": \"None\"};\r\n-        const objEvent = JSON.parse(event);\r\n-        document.getElementsById(\"eventName\").innerHTML  = obj[\"date\"];\r\n-    </script>\r\n-    <br>\r\n-    Fix-a-test\r\n-    <script type=\"module\" src=\"scripts/events2.js\"></script>\r\n     <script src=\"scripts/footer.js\"></script>\r\n </body>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1766445420191,
