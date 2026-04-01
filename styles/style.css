@@ -28,6 +28,13 @@
     text-align: center;
 }
 
+.table-container {
+    display: flexbox;
+    flex-direction: row;
+    align-self: stretch;
+    margin: 20px;
+}
+
 .menu_item {
     display: flex;
     flex-direction: row;
