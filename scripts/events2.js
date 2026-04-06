@@ -11,9 +11,9 @@ const events = [
     { "date": "2026-05-07 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
     { "date": "2026-05-07 23:00", "text": "Start Times Avalible", "link": "Link will be live when avalible", "linkText": "None" },
     { "date": "2026-05-08 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
-    { "date": "2026-05-09 08:00", "text": "Queeny Park Horse Trials (Dressage + Stadium Day)", "link": "None", "linkText": "None" },
+    { "date": "2026-05-09 08:00", "text": "Queeny Park Horse Trials (Dressage + Stadium Day)", "link": "https://useventing.com/events-competitions/calendar/event?event=18983", "linkText": "Omnibus" },
     { "date": "2026-05-09 08:00", "text": "Queeny Park Horse Trials (Cross Country Day)", "link": "None", "linkText": "None" },
-    { "date": "2026-06-27 20:00", "text": "Trivia Night (Tenative)", "link": "None", "linkText": "None" }
+    { "date": "2026-06-27 20:00", "text": "Trivia Night (Tenative)", "link": "None", "link": "https://useventing.com/events-competitions/calendar/event?event=18983", "linkText": "Omnibus" }
 ]
 const body = document.getElementById("body");
 
