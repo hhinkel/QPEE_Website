@@ -20,7 +20,7 @@ const body = document.getElementById("body");
 function createEvents() {
     const table = document.createElement("table");
     table.style.alignSelf = 'center';
-    table.style.border = '2px solid black';
+    //table.style.border = '2px solid black';
 
     //Create Headers
     const headers = ["Date", "Time", "Event", "Link"];
@@ -28,7 +28,7 @@ function createEvents() {
     headers.forEach(text => {
         const th = document.createElement("th");
         th.textContent = text;
-        th.style.border = '2px solid black';
+        //th.style.border = '2px solid black';
         headerRow.appendChild(th);
     });
     table.appendChild(headerRow);
@@ -54,6 +54,8 @@ function createEvents() {
                 const aLink = document.createElement("a");
                 aLink.textContent = event.linkText;
                 aLink.href = event.link;
+                //link.style.border = '2px solid black';
+                link.style.padding = '5px';
                 aLink.target = "_blank";
                 link.appendChild(aLink);
             }
@@ -64,7 +66,7 @@ function createEvents() {
         const year = dateTime.slice(0, 4);
         const month = dateTime.slice(5, 7);
         const day = dateTime.slice(8, 10);
-        return day + "/" + month + "/" + year;
+        return month + "/" + day + "/" + year;
     }
 
     function getTime(dateTime) {
@@ -74,7 +76,7 @@ function createEvents() {
 
     function createCell(cell, value) {
         cell.textContent = value;
-        cell.style.border = '2px solid black';
+        //cell.style.border = '2px solid black';
         cell.style.padding = '5px';
         return cell;
     }
