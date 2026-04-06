@@ -1,7 +1,19 @@
 const events = [
-    { "date": "2026-04-04 00:00", "text": "Closing for Fix-a-Test and Mini Event", "link": "None" },
-    { "date": "2026-04-11 09:00", "text": "Fix-a-Test", "link": "None" },
-    { "date": "2026-04-12 08:00", "text": "Mini Event", "link": "None" }
+    { "date": "2026-03-24 00:00", "text": "Opening Date Queeny Park Horse Trials", "link": "https://useventing.com/events-competitions/calendar/event?event=18983", "linkText": "Omnibus" },
+    { "date": "2026-04-11 09:00", "text": "Fix-a-Test (Cancelled)", "link": "None", "linkText": "None" },
+    { "date": "2026-04-12 08:00", "text": "Mini Event (Closed)", "link": "None", "linkText": "None" },
+    { "date": "2026-03-24 00:00", "text": "Closing Date Queeny Park Horse Trials", "link": "https://useventing.com/events-competitions/calendar/event?event=18983", "linkText": "Omnibus" },
+    { "date": "2026-05-02 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-03 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-04 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-05 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-06 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-07 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-07 23:00", "text": "Start Times Avalible", "link": "Link will be live when avalible", "linkText": "None" },
+    { "date": "2026-05-08 08:00", "text": "Work Day for Horse Trials", "link": "None", "linkText": "None" },
+    { "date": "2026-05-09 08:00", "text": "Queeny Park Horse Trials (Dressage + Stadium Day)", "link": "None", "linkText": "None" },
+    { "date": "2026-05-09 08:00", "text": "Queeny Park Horse Trials (Cross Country Day)", "link": "None", "linkText": "None" },
+    { "date": "2026-06-27 20:00", "text": "Trivia Night (Tenative)", "link": "None", "linkText": "None" }
 ]
 const body = document.getElementById("body");
 
@@ -21,28 +33,42 @@ function createEvents() {
     });
     table.appendChild(headerRow);
 
-    // Create Data Rows
-    events.forEach(event => {
-        const row = document.createElement("tr");
-        const eventDate = getDate(event.date);
-        const eventTime = getTime(event.date);
-        
-        const date = document.createElement("td");
-        row.appendChild(createCell(date, eventDate));
-        const time = document.createElement("td");
-        row.appendChild(createCell(time, eventTime));
-        const text = document.createElement("td");
-        row.appendChild(createCell(text, event.text));
-        const link = document.createElement("td");
-        row.appendChild(createCell(link, event.link));        
-        table.appendChild(row);
-    });
+    createData();
 
-    function getDate(date) {
-        return date;
+    function createData() {
+        events.forEach(event => {
+            const row = table.insertRow();
+            const eventDate = getDate(event.date);
+            const eventTime = getTime(event.date);
+
+            const date = row.insertCell();
+            row.appendChild(createCell(date, eventDate));
+            const time = row.insertCell();
+            row.appendChild(createCell(time, eventTime));
+            const text = row.insertCell();
+            row.appendChild(createCell(text, event.text));
+            const link = row.insertCell();
+            if (event.linkText == "None") {
+                row.appendChild(createCell(link, event.link));
+            } else {
+                const aLink = document.createElement("a");
+                aLink.textContent = event.linkText;
+                aLink.href = event.link;
+                aLink.target = "_blank";
+                link.appendChild(aLink);
+            }
+        });
     }
 
-    function getTime(time) {
+    function getDate(dateTime) {
+        const year = dateTime.slice(0, 4);
+        const month = dateTime.slice(5, 7);
+        const day = dateTime.slice(8, 10);
+        return day + "/" + month + "/" + year;
+    }
+
+    function getTime(dateTime) {
+        const time = dateTime.slice(11, 16);
         return time;
     }
 
